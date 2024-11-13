@@ -1,6 +1,6 @@
 # UF2_FASTAPI
 
-## Captures de pantalla
+## Captures de pantalla GET i POST
 
 ### Mètode GET
 >- Codi a Python:
@@ -15,6 +15,7 @@
 
 ![Resultat_PostMan](/ACTIVITAT_8/images/Captura%20de%20pantalla%202024-11-11%20190439.png)
 
+<br><br><br><br>
 ### Mètode POST
 >- Codi a Python:
 
@@ -29,3 +30,9 @@
 >- Resultat a PostMan:
 
 ![Resultat_PostMan](/ACTIVITAT_8/images/Captura%20de%20pantalla%202024-11-11%20190439.png)
+
+## Captura de pantalla amb modificació del BaseModel
+![BaseModel_modificat](/ACTIVITAT_8/images/Captura%20de%20pantalla%202024-11-13%20194523.png)
+
+## Captura de pantalla introduint status code 404
+![ERROR_404](/ACTIVITAT_8/images/Captura%20de%20pantalla%202024-11-13%20203302.png)
