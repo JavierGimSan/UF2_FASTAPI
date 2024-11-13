@@ -1,4 +1,11 @@
 from fastapi import FastAPI
+from pydantic import BaseModel
+
+##Declaro el basemodel per fer el POST:
+class Usuari(BaseModel):
+    nom: str
+    edat: int
+    aula: str
 
 app = FastAPI()
 
@@ -14,3 +21,6 @@ async def read_segonGet():
             "tercer_camp": "últim"
             }
 
+@app.post("/introduirUsuari")
+async def enter_user(usuari: Usuari):
+    return usuari
