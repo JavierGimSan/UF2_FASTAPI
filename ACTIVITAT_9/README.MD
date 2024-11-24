@@ -15,3 +15,18 @@
 
 >-Prova a Swagger
 ![Prova_a_Swagger](/ACTIVITAT_9/images/Captura%20de%20pantalla%202024-11-20%20194235.png)
+
+
+# DOCUMENTACIÓ DEL CRUD AMB POSTMAN
+
+## Create:
+![Crear_usuari](/ACTIVITAT_9/images/Captura%20de%20pantalla%202024-11-24%20233743.png)
+
+## Read:
+![Crear_usuari](/ACTIVITAT_9/images/Captura%20de%20pantalla%202024-11-24%20233654.png)
+
+## Update:
+![Crear_usuari](/ACTIVITAT_9/images/Captura%20de%20pantalla%202024-11-24%20234355.png)
+
+## Delete:
+![Crear_usuari](/ACTIVITAT_9/images/Captura%20de%20pantalla%202024-11-24%20233759.png)
