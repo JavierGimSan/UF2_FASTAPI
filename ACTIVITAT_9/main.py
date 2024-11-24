@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from typing import List
-import users_sch
-import users
+import schemas.users_sch as users_sch
+import crud.users as users
 
 app = FastAPI()
 

@@ -1,4 +1,4 @@
-from conn import connection_db
+from db_connect.conn import connection_db
 
 def read_users():
     try:
