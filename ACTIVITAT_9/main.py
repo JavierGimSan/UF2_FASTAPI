@@ -1,9 +1,10 @@
-@app.get("/users", response_model=List[dict])
-async def read_users():
-    return {"Id": user[0],
-            "name": user[1],
-            "surname": user[2],
-            }
+from fastapi import FastAPI
+from typing import List
+import users_sch
+import users
 
-def users_schema(users) -> dict:
-    return [user_schema(user) for user in users]
+app = FastAPI()
+
+@app.get("/users", response_model=List[dict])
+async def get_users():
+    return users_sch.users_schema(users.read_users())
