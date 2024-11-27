@@ -1,7 +1,17 @@
 import pandas as pd
+import insert_data as ins_dat
 
-paraules = pd.read_csv("paraules_tematica_penjat.csv")
+def csv_to_json():
+    paraules = pd.read_csv("paraules_tematica_penjat.csv")
 
-paraules_dict = paraules.to_dict(orient='list')
+    paraules_dict = paraules.to_dict(orient='list')
 
-print(paraules_dict)
+    return paraules_dict
+
+    #print(paraules_dict["WORD"][0])
+    #print(paraules_dict["THEME"][0])
+
+data = csv_to_json()
+
+for i in range (500):
+    ins_dat.insert_dat_csv_to_db(i, data)
