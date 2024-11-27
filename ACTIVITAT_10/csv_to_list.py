@@ -14,4 +14,4 @@ def csv_to_json():
 data = csv_to_json()
 
 for i in range (500):
-    ins_dat.insert_dat_csv_to_db(i, data)
+    ins_dat.insert_dat_csv_to_db(i, data) # Pilla la función del archivo 'insert_data.py' y la hace 500 veces, que son los elementos que tiene la lista

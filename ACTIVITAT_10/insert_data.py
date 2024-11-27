@@ -1,6 +1,6 @@
 import psycopg2
 
-def insert_dat_csv_to_db(pos, data):
+def insert_dat_csv_to_db(pos, data): #Le pasamos pos(la 'i' del bucle) y data(la lista de la que podemos extraer 'WORD' y 'THEME')
     conn = psycopg2.connect(
         database="postgres_24266",
         user="user_postgres1",
@@ -11,8 +11,8 @@ def insert_dat_csv_to_db(pos, data):
 
     cur = conn.cursor()
     sql = "INSERT INTO paraules (word, tematica) VALUES (%s, %s);"
-    print(data["WORD"][pos])
-    print(data["THEME"][pos])
+    #print(data["WORD"][pos])
+    #print(data["THEME"][pos])
     values = ((data["WORD"][pos], data["THEME"][pos]))
 
     cur.execute(sql, values)
