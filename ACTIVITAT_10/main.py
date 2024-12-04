@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI
 from typing import List
 import paraules_sch
 from metodes_queries import read_tematiques

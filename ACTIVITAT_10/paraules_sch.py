@@ -1,3 +1,6 @@
+def paraula_schema(paraula) -> dict:
+    return {""}
+
 def tematica_schema(tematica) -> dict:
     return {"opcio": tematica[0]}
 
