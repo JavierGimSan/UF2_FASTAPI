@@ -1,10 +1,10 @@
 from conn import connection_db
 
-def read_all():
+def read_all(tematica):
     try:
         conn = connection_db()
         cursor = conn.cursor()
-        cursor.execute("SELECT * FROM paraules;")
+        cursor.execute("SELECT word FROM paraules WHERE tematica = %s;", (tematica,))
         paraules = cursor.fetchall()
         cursor.close()
         conn.close()
