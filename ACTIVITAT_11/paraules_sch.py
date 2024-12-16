@@ -14,4 +14,4 @@ def lletra_schema(lletra) -> dict:
     return {"lletra": lletra[0]}
 
 def lletres_schema(lletres) -> dict:
-    return {lletra_schema(lletra) for lletra in lletres}
+    return [lletra_schema(lletra) for lletra in lletres]
