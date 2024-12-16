@@ -35,3 +35,27 @@ def read_lletres_idioma(idioma):
         return lletres
     except Exception as e:
         raise Exception(f"Error: {e}")
+
+def read_text_comencar():
+    try:
+        conn = connection_db()
+        cursor = conn.cursor()
+        cursor.execute("SELECT text_comencar from comencar_partida WHERE id = 1;")
+        text_comencar = cursor.fetchone()
+        cursor.close()
+        conn.close()
+        return text_comencar
+    except Exception as e:
+        raise Exception(f"Error: {e}")
+    
+def read_imatge_intents(intents):
+    try:
+        conn = connection_db()
+        cursor = conn.cursor()
+        cursor.execute("SELECT nom_imatge from intents WHERE id_imatge = %s;",(intents,))
+        nom_imatge = cursor.fetchone()
+        cursor.close()
+        conn.close()
+        return nom_imatge
+    except Exception as e:
+        raise Exception(f"Error: {e}")

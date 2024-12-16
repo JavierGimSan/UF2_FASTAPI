@@ -15,3 +15,9 @@ def lletra_schema(lletra) -> dict:
 
 def lletres_schema(lletres) -> dict:
     return [lletra_schema(lletra) for lletra in lletres]
+
+def text_comencar_schema(text_comencar) -> dict:
+    return {"text_comencar": text_comencar[0]}
+
+def imatge_intents_schema(nom_imatge) -> dict:
+    return {"nom_imatge": nom_imatge[0]}
