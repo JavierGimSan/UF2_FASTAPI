@@ -21,3 +21,6 @@ def text_comencar_schema(text_comencar) -> dict:
 
 def imatge_intents_schema(nom_imatge) -> dict:
     return {"nom_imatge": nom_imatge[0]}
+
+def partides_guanyades_schema(partides_guanyades) -> dict:
+    return {"partides_guanyades": partides_guanyades}
