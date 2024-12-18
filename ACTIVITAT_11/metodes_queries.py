@@ -60,14 +60,26 @@ def read_imatge_intents(intents):
     except Exception as e:
         raise Exception(f"Error: {e}")
     
-def read_partides_guanyades(id_usuari):
+def read_partides_guanyades(nom_usuari):
     try:
         conn = connection_db()
         cursor = conn.cursor()
-        cursor.execute("SELECT partides_guanyades from usuaris WHERE nom_usuari = %s;",(nom_imatge,))
+        cursor.execute("SELECT partides_guanyades from usuaris WHERE nom_usuari = %s;",(nom_usuari,))
         partides_guanyades = cursor.fetchone()
         cursor.close()
         conn.close()
         return partides_guanyades
+    except Exception as e:
+        raise Exception(f"Error: {e}")
+    
+def read_info_joc(id_joc):
+    try:
+        conn = connection_db()
+        cursor = conn.cursor()
+        cursor.execute("SELECT punts_actuals, total_partides, partida_mes_punts from joc WHERE id_joc = %s;",(id_joc,))
+        joc = cursor.fetchone()
+        cursor.close()
+        conn.close()
+        return joc
     except Exception as e:
         raise Exception(f"Error: {e}")

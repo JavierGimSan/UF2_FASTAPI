@@ -23,4 +23,10 @@ def imatge_intents_schema(nom_imatge) -> dict:
     return {"nom_imatge": nom_imatge[0]}
 
 def partides_guanyades_schema(partides_guanyades) -> dict:
-    return {"partides_guanyades": partides_guanyades}
+    return {"partides_guanyades": partides_guanyades[0]}
+
+def joc_schema(joc) -> dict:
+    return {"punts_actuals": joc[0],
+            "total_partides": joc[1],
+            "partide_mes_punts": joc[2],
+            }
